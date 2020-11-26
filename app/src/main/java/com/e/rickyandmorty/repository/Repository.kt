@@ -1,16 +1,19 @@
-package com.e.rickyandmorty
+package com.e.rickyandmorty.repository
 
 import com.e.rickyandmorty.models.personagem.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 //aqui teremos a interface que implementa os métodos que fazem a requisição e também a instancia do service
 
 interface Service {
 
     @GET("character")
-    suspend fun getTodosPersonagensRepo(): PersonagemWrapper
+    suspend fun getTodosPersonagensRepo(
+        @Query("page") page: Int = 1
+    ): PersonagemWrapper
 
 }
 
