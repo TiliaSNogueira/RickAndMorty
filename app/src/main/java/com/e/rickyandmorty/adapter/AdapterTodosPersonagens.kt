@@ -23,14 +23,14 @@ class AdapterTodosPersonagens(val listaTodosPersonagens : List<Results>, val lis
         holder.especiePersonagem.text = personagem.species
 
         holder.itemView.setOnClickListener{
-            listener.escolhePersonagem(position)
+            listener.escolhePersonagemClick(position)
         }
 
     }
 
     interface personagemOnClickListener{
 
-        fun escolhePersonagem(position: Int)
+        fun escolhePersonagemClick(position: Int)
 
 
     }

@@ -9,5 +9,18 @@
         android:id="@+id/fragmentExibePersonagens"
         android:name="com.e.rickyandmorty.ui.FragmentExibePersonagens"
         android:label="fragment_exibe_personagens"
-        tools:layout="@layout/fragment_exibe_personagens" />
+        tools:layout="@layout/fragment_exibe_personagens" >
+        <action
+            android:id="@+id/action_fragmentExibePersonagens_to_fragmentDetalhesPersonagem"
+            app:destination="@id/fragmentDetalhesPersonagem" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDetalhesPersonagem"
+        android:name="com.e.rickyandmorty.ui.FragmentDetalhesPersonagem"
+        android:label="fragment_detalhes_personagem"
+        tools:layout="@layout/fragment_detalhes_personagem" >
+        <action
+            android:id="@+id/action_fragmentDetalhesPersonagem_to_fragmentExibePersonagens"
+            app:destination="@id/fragmentExibePersonagens" />
+    </fragment>
 </navigation>
